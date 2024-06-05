@@ -37,7 +37,7 @@ To verify that Node.js is installed correctly and working, follow these steps:
 This command will display the installed version of Node.js. If the installation was successful, you should see the version number, such as:
 
    ```
-   v18.16.0
+   v20.14.0
    ```
 
 3. Next, type the following command and press Enter:
@@ -49,7 +49,7 @@ This command will display the installed version of Node.js. If the installation 
    This command will display the installed version of npm (Node Package Manager), which comes bundled with Node.js. If the installation was successful, you should see the version number, such as:
 
    ```
-   9.5.1
+   10.7.0
    ```
 
 If both commands display the respective version numbers without any errors, congratulations! You have successfully installed Node.js LTS on your machine, and it is working correctly.

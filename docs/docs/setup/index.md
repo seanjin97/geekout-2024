@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Setup Overview
+# Setup
 
 Welcome to the Setup Guides section! This area contains detailed instructions on setting up various development tools that are essential for modern software development. Whether you're a beginner or a seasoned developer, these guides will help you get your environment ready for coding efficiently.
 

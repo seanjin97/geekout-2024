@@ -20,7 +20,10 @@ Visual Studio Code (VS Code) is a popular and powerful code editor that provides
 2. Click on the "Download for Windows" button.
 3. Once the download is complete, run the installer.
 4. Follow the installation wizard, accepting the default options or customizing as desired.
-5. After the installation is finished, VS Code will launch automatically.
+5. I personally tick everything
+   
+   ![img.png](images/wizard.png)
+6. After the installation is finished, VS Code will launch automatically.
 
 ## Configuring VS Code (Everything below is optional)
 
