@@ -4,7 +4,6 @@ sidebar_position: 7
 
 
 
-### 2.4. Update a Todo Item (PUT /todos/:id)
 
 
 
