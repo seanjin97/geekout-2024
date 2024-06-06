@@ -1,17 +1,4 @@
 [
-  {
-    "id": 1,
-    "title": "buy groceries 😃🍎",
-    "completed": false
-  },
-  {
-    "id": 2,
-    "title": "drink water 🥤",
-    "completed": false
-  },
-  {
-    "id": 3,
-    "title": "help papa water plants 😛🥦",
-    "completed": true
-  }
+  { "id": 2, "title": "drink water 🥤", "completed": false },
+  { "id": 3, "title": "help papa water plants 😛🥦", "completed": true }
 ]

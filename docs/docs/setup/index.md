@@ -18,11 +18,3 @@ Visual Studio Code (VSCode) is a lightweight but powerful source code editor whi
 
 ### [Postman](./postman.md)
 Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster.
-
-## Getting Started
-
-To make the most out of these guides, follow the instructions in the order presented and ensure your system meets all the required prerequisites specified in each guide. If you encounter any issues or have questions, feel free to ask for help (ping us on discord!!) or search for solutions online (you's strong and independent yes).
-
-## Conclusion
-
-Setting up your development environment properly is the first step toward a successful coding journey. These guides aim to provide you with a smooth setup process for each tool, ensuring that you can focus on what's important: building great software.

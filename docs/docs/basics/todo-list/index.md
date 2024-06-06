@@ -56,3 +56,20 @@ Let's first create a JSON file called `todos.json` that contains dummy JSON data
   }
 ]
 ```
+## Recap: Status codes
+* `1xx` informational response – the request was received, continuing process
+* `2xx` successful – the request was successfully received, understood, and accepted
+* `3xx` redirection – further action needs to be taken in order to complete the request
+* `4xx` client error – the request contains bad syntax or cannot be fulfilled
+* `5xx` server error – the server failed to fulfil an apparently valid request
+
+### Commonly used status codes
+| Status Code | Description                 | 
+|-------------|-----------------------------|
+| `200`       | Ok                          |
+| `201`       | Created                     |
+| `204`       | No content to respond with. |
+| `400`       | Bad Request                 |
+| `401`       | Unauthorized                |
+| `404`       | Not Found                   |
+

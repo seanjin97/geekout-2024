@@ -5,8 +5,9 @@ sidebar_position: 5
 # 1.3. Create a New Todo Task v2
 
 ## Designing the API:
+It works, but can we make it better? Let's iterate on our feature.
 
-Let's consider a bit more from the user's perspective and build some empathy for them. **How can we improve the user's experience?**
+Let's consider how the user would use our API and build some empathy for them. **How can we improve the user's experience?**
 1. A new request item shouldn't have the `id` field. The `id` field is for us to identify a todo task, that burden shouldn't be placed on the user. (*Like bro you want add a todo item still need think of what `id` to put meh.*)
 2. It also doesn't make sense for a newly added todo task to be marked as completed either. Let's automatically set the completed field as `false` for them.
 

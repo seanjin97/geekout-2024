@@ -19,10 +19,11 @@ app.get("/todos", (req, res) => {
 
 app.get("/todos/:id", (req, res) => {
   const todoId = Number(req.params.id);
-  // Logic to retrieve a specific todo item by its ID
-  const data = fs.readFileSync("./todos.json", "utf-8");
 
-  const formattedData = JSON.parse(data);
+  // Read our existing todos
+  const existingTodos = fs.readFileSync("./todos.json", "utf-8");
+
+  const formattedData = JSON.parse(existingTodos);
 
   const theTodoIwant = formattedData.find((todo) => todo.id === todoId);
 
@@ -77,11 +78,11 @@ app.put("/todos/:id", (req, res) => {
   const title = requestBody.title;
   const completed = requestBody.completed;
 
-  // Retrieve all our existing todos
+  // Read our existing todos
   const existingTodos = fs.readFileSync("todos.json", "utf-8");
   const formattedTodos = JSON.parse(existingTodos);
 
-  let updatedTodo = undefined;
+  let updatedTodo;
   // Loop through all todos and update the one we're interested in
   for (let index = 0; index < formattedTodos.length; index++) {
     const todoTask = formattedTodos[index];
@@ -101,6 +102,33 @@ app.put("/todos/:id", (req, res) => {
 
   res.status(200).json(updatedTodo);
 });
+
+app.delete("/todos/:id", (req, res) => {
+  const todoId = Number(req.params.id);
+
+  // Read our existing todos
+  const existingTodos = fs.readFileSync("todos.json", "utf-8");
+  const formattedExistingTodos = JSON.parse(existingTodos);
+
+  // Check that the todo we want to delete exists
+  const theTodoIwant = formattedExistingTodos.find(
+    (todo) => todo.id === todoId
+  );
+
+  if (!theTodoIwant) {
+    res.status(400).json({ error: "no such todo" });
+  }
+
+  const updatedListOfTodos = formattedExistingTodos.filter(
+    (todo) => todo.id !== todoId
+  );
+
+  // Save the updated list of todos
+  fs.writeFileSync("todos.json", JSON.stringify(updatedListOfTodos));
+  res.sendStatus(204);
+});
+
+app.use("/doc", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.listen(8000, () => {
   console.log("Server is running on port 8000");

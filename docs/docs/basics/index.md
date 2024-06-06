@@ -14,4 +14,4 @@ The Todo List API will allow users to perform CRUD (Create, Read, Update, Delete
 1. How to create an Express API server from scratch.
 2. Understand project setup and dependencies.
 3. How to properly design REST API endpoints.
-4. API documentation.
+4. Understand what a client and server is.

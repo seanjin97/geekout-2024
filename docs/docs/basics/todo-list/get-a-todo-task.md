@@ -5,9 +5,9 @@ sidebar_position: 2
 # 1.2. Get a specific Todo Task
  
 ## Designing the API:
-| Given               | When                                     | Then                                                                                            |
-|---------------------|------------------------------------------|-------------------------------------------------------------------------------------------------|
-| As a todo list user | I want to retrieve a specific todo item, | I call this endpoint and I should retrieve the details of the specific todo item if it is found |
+| Given               | When                                    | Then                                                                                            |
+|---------------------|-----------------------------------------|-------------------------------------------------------------------------------------------------|
+| As a todo list user | I want to retrieve a specific todo item | I call this endpoint and I should retrieve the details of the specific todo item if it is found |
 
 It's a `GET` request because we are retrieving data.
 
