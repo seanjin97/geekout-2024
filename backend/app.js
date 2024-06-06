@@ -128,8 +128,6 @@ app.delete("/todos/:id", (req, res) => {
   res.sendStatus(204);
 });
 
-app.use("/doc", swaggerUi.serve, swaggerUi.setup(swaggerFile));
-
 app.listen(8000, () => {
   console.log("Server is running on port 8000");
 });

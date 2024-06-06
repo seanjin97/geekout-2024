@@ -20,5 +20,5 @@ Feel free to raise your hands during the workshop too, we'll have techncial assi
 ## During the workshop
 1. We'll do the hands on in [Basics](./basics/index.md) together. Feel free to copy paste the code snippets there if you get lost.
  
-2. If you want more challenge, feel free to fry your brains more at the [Advanced](advanced/index.md) section. <small>*(i mean why not)*</small>
+2. If you want more challenge, feel free to fry your brains at the [Advanced](advanced/index.md) section. <small>*(i mean why not)*</small>
 
