@@ -12,4 +12,9 @@ to guide yourself in your journey
 
 and keep you sane
 
-https://roadmap.sh/backend
+
+## Roadmaps
+* Get started here: https://roadmap.sh/get-started
+* Full Stack Roadmap - https://roadmap.sh/full-stack
+* Frontend Roadmap - https://roadmap.sh/frontend
+* Backend Roadmap - https://roadmap.sh/backend
