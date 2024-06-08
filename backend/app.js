@@ -1,9 +1,12 @@
 const { randomInt } = require("crypto");
 const express = require("express");
+const cors = require("cors");
 
 const fs = require("fs");
 
 const app = express();
+
+app.use(cors());
 
 app.get("/hello", (req, res) => {
   res.send("Hello, World!");
@@ -42,11 +45,11 @@ app.post("/todos", (req, res) => {
   // Logic to create a new todo item
   const requestBody = req.body;
 
-  const newTodoItemTitle = requestBody.title;
+  const newTodoItemDescription = requestBody.description;
 
-  // What if there's no title field given?
-  if (!newTodoItemTitle) {
-    res.status(400).json({ error: "no title bro" });
+  // What if there's no description field given?
+  if (!newTodoItemDescription) {
+    res.status(400).json({ error: "no description bro" });
   }
   // Read our existing todos
   const existingTodos = fs.readFileSync("todos.json", "utf-8");
@@ -54,8 +57,8 @@ app.post("/todos", (req, res) => {
 
   // Create a new todo
   const newTodoItem = {
-    id: randomInt(0, 99999), // let's be real we're not ever gonna create 100k todo items in our lives
-    title: newTodoItemTitle,
+    id: randomInt(0, 999999999),
+    description: newTodoItemDescription,
     completed: false,
   };
 
@@ -75,7 +78,7 @@ app.put("/todos/:id", (req, res) => {
   if (!requestBody) {
     res.status(400).json({ error: "no request body" });
   }
-  const title = requestBody.title;
+  const description = requestBody.description;
   const completed = requestBody.completed;
 
   // Read our existing todos
@@ -88,7 +91,7 @@ app.put("/todos/:id", (req, res) => {
     const todoTask = formattedTodos[index];
     console.log(todoTask);
     if (todoTask.id === todoId) {
-      todoTask.title = title;
+      todoTask.description = description;
       todoTask.completed = completed;
       updatedTodo = todoTask;
     }
