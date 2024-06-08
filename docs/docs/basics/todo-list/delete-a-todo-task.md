@@ -5,8 +5,9 @@ sidebar_position: 7
 # 1.5. Delete a Todo Task
 
 ## Designing the API:
+
 | Given               | When                                  | Then                                                                 |
-|---------------------|---------------------------------------|----------------------------------------------------------------------|
+| ------------------- | ------------------------------------- | -------------------------------------------------------------------- |
 | As a todo list user | I want to delete a specific todo item | I call this endpoint and I should see that the todo task is deleted. |
 
 It's a `DELETE` request because we are deleting data.
@@ -25,7 +26,7 @@ app.delete("/todos/:id", (req, res) => {
 
   // Check that the todo we want to delete exists
   const theTodoIwant = formattedExistingTodos.find(
-      (todo) => todo.id === todoId
+    (todo) => todo.id === todoId
   );
 
   if (!theTodoIwant) {
@@ -33,7 +34,7 @@ app.delete("/todos/:id", (req, res) => {
   }
 
   const updatedListOfTodos = formattedExistingTodos.filter(
-      (todo) => todo.id !== todoId
+    (todo) => todo.id !== todoId
   );
 
   // Save the updated list of todos

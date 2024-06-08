@@ -8,13 +8,13 @@ it's overwhelming
 
 the best way to go about it is to create a todo list for yourself
 
-to guide yourself in your journey
+to guide you on your journey
 
-and keep you sane
-
+and keep yourself sane
 
 ## Roadmaps
-* Get started here: https://roadmap.sh/get-started
-* Full Stack Roadmap - https://roadmap.sh/full-stack
-* Frontend Roadmap - https://roadmap.sh/frontend
-* Backend Roadmap - https://roadmap.sh/backend
+
+- Get started here: https://roadmap.sh/get-started
+- Full Stack Roadmap - https://roadmap.sh/full-stack
+- Frontend Roadmap - https://roadmap.sh/frontend
+- Backend Roadmap - https://roadmap.sh/backend

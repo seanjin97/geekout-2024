@@ -7,7 +7,7 @@ sidebar_position: 4
 ## Designing the API:
 
 | Given               | When                          | Then                                                                                                         |
-|---------------------|-------------------------------|--------------------------------------------------------------------------------------------------------------|
+| ------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | As a todo list user | I want to add a new todo task | I call this API with all the fields and the server should tell me that it's been created successfully or not |
 
 It's a `POST` request because we are creating data.
@@ -21,25 +21,25 @@ The endpoint we should create is `POST /todos` where we take in a request body w
 app.use(express.json());
 
 app.post("/todos", (req, res) => {
-   // Logic to create a new todo item
-   const requestBody = req.body;
+  // Logic to create a new todo item
+  const requestBody = req.body;
 
-   // What if there's no request body?
-   if (!requestBody) {
-      res.status(400).json({ error: "no request body provided" });
-   }
+  // What if there's no request body?
+  if (!requestBody) {
+    res.status(400).json({ error: "no request body provided" });
+  }
 
-   const newTodoItemId = requestBody.id;
-   const newTodoItemTitle = requestBody.title;
-   const newTodoItemCompletedStatus = requestBody.completed;
+  const newTodoItemId = requestBody.id;
+  const newTodoItemDescription = requestBody.description;
+  const newTodoItemCompletedStatus = requestBody.completed;
 
-   const newTodoItem = {
-      id: newTodoItemId,
-      title: newTodoItemTitle,
-      completed: newTodoItemCompletedStatus,
-   };
+  const newTodoItem = {
+    id: newTodoItemId,
+    description: newTodoItemDescription,
+    completed: newTodoItemCompletedStatus,
+  };
 
-   res.status(201).json(newTodoItem);
+  res.status(201).json(newTodoItem);
 });
 ```
 
