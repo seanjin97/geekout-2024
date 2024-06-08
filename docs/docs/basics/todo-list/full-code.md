@@ -100,7 +100,6 @@ app.put("/todos/:id", (req, res) => {
   // Loop through all todos and update the one we're interested in
   for (let index = 0; index < formattedTodos.length; index++) {
     const todoTask = formattedTodos[index];
-    console.log(todoTask);
     if (todoTask.id === todoId) {
       todoTask.description = description;
       todoTask.completed = completed;
@@ -139,7 +138,7 @@ app.delete("/todos/:id", (req, res) => {
 
   // Save the updated list of todos
   fs.writeFileSync("todos.json", JSON.stringify(updatedListOfTodos));
-  res.sendStatus(204);
+  res.status(204).json();
 });
 
 app.listen(8000, () => {
