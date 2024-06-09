@@ -1,8 +1,9 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # API Documentation
+
 As a developer, it's important to document your APIs so that
 
 1. **Clarity and Understanding**: API documentation provides a clear explanation of what your API does, how it works, and how to use it effectively. It serves as a guide for both your team members and external developers who may integrate with your API.
@@ -16,4 +17,5 @@ As a developer, it's important to document your APIs so that
 5. **Better API Discoverability**: Documenting your APIs makes them more discoverable. Developers can easily find and explore the available endpoints, understand the functionality offered, and determine if your API meets their requirements. This increases the visibility of your API and attracts potential users.
 
 # Documenting Your Express APIs
+
 honestly, just chatgpt it. aint nobody got time for allat.
