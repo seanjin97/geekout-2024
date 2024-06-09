@@ -12,6 +12,6 @@ Ya it might get overwhelming, like why even need to have testing, why need authe
 
 But just do it for funsies and for practice.
 
-There'll be less handholding here, so just chatgpt or google search whatever you don't understand.
+There'll be less handholding here, so just chatgpt or google search whatever you don't understand or ask the facilitators in person.
 
 <small>_aight let's get to it._</small>
