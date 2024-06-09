@@ -4,26 +4,22 @@ sidebar_position: 3
 
 # Hosting
 
-U got ur api alr then now what, ownself call on localhost where got fun
+U got ur api alr then now what, ownself call on localhost where got fun. Need to let people use ma, so we host it. Hosting options for backend servers. There's like 1 million of them.
 
-Need to let people use ma, so we host it
+- Some require you to put your card details before using.
 
-Hosting options for backend servers. There's like 1 million of them.
+- Some setup a free database for you.
 
-Some require you to put your card details before using.
+- Some allow you to deploy docker images.
 
-Some setup a free database for you.
+- Some are easier to use than others.
 
-Some allow you to deploy docker images.
-
-Some are easier to use than others.
-
-**Depends on what you're looking for:**
+**It depends on what you're looking for:**
 
 Easy to use:
 
 1. Render
-2. Firebas
+2. Firebase
 3. Railway
 4. Fly.io
 
@@ -45,9 +41,9 @@ For this exercise I'll just pick [Render](https://render.com/) randomly and it l
 
 ![create new web service](images/hosting/web-service.png)
 
-3. Create a new GitHub repository (google it if you dk how) and push your Express.js server code there. It should look something like [this](https://github.com/seanjin97/geekout-2024/tree/master/hosting)
+3. Create a new GitHub repository (google it if you dk how) and push your Express.js server code there. It should look something like [this](https://github.com/seanjin97/geekout-2024/tree/master/backend/hosting).
 
-4. Connect your that GitHub code repository to Render.
+4. Connect that GitHub code repository to Render.
 
 ![connect to a repo](images/hosting/connect-repo.png)
 
@@ -58,3 +54,5 @@ For this exercise I'll just pick [Render](https://render.com/) randomly and it l
 6. Now wait for your server to be deployed. Once done, try hitting the endpoint that they provisioned for you.
 
 ![hosted](images/hosting/hosted.png)
+
+and we now have a live API server. nice.
