@@ -42,4 +42,4 @@ Let's try to understand how `useEffect` is used in our Todo application.
 
 ### Exercise 4B
 
-Let's add a second `useEffect` hook to ensure that the Todo description turns red when it exceeds 30 characters.
+Let's add a second `useEffect` hook to ensure that the `Save Task` button gets disabled when the task description it exceeds 30 characters.
