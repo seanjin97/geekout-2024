@@ -37,5 +37,5 @@ Let's now try to modify our app so that the checkbox works by adding a `done` st
 
 TodoItem component
 ``` jsx
- const [done, setDone] = useState(props.done);
+ const [completed, setCompleted] = useState(props.completed);
 ```
