@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 
 # Introduction
-hello welcome to Geekout 2024 backend workshop!! hope u enjoy.
+hello welcome to Geekout 2024 web app dev workshop!! hope u enjoy.
 
 ## Pre-workshop setup
 1. Please please setup the tools required for this workshop in the [Setup](./setup/index.md) section before the workshop.
@@ -11,7 +11,7 @@ hello welcome to Geekout 2024 backend workshop!! hope u enjoy.
 <small>*if u don't wanna setup before hand, can setup during the workshop but you might not have time*</small>
 
 ## Asking for help
-Feel free to ask for help in the [# backend-workshop](https://discord.com/channels/1224913680689266749/1224920594408144928) discord channel anytime (could be during the workshop or after the workshop or before or 2am or 8am)
+Feel free to ask for help in the [# backend-workshop](https://discord.com/channels/1224913680689266749/1224920594408144928) and [# frontend-workshop](https://discord.com/channels/1224913680689266749/1224917050796015707) discord channels anytime (could be during the workshop or after the workshop or before or 2am or 8am)
 
 Feel free to raise your hands during the workshop too, we'll have techncial assistants roaming around to help u if you get stuck.
 
