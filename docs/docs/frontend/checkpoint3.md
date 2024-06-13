@@ -4,13 +4,13 @@ sidebar_position: 3
 
 # 1.3 Hooks and state
 
-Hooks are functions that let you “hook into” React state and lifecycle features from function components. Hooks help you in keeping track of data that changes, adding interactivity to your website, and managing the way your components work.
+Hooks are functions that let you "hook into" React state and lifecycle features from function components. Hooks help you in keeping track of data that changes, adding interactivity to your website, and managing the way your components work.
 
 Some hooks that are commonly used: 
 - State hook (useState). **State** is an object that holds information that may change over the lifetime of a component. It's a way to keep track of dynamic data in your application. When the state of a component changes, React re-renders the component to reflect the new state.
 - Effect hook (useEffect). We'll explore this in the next checkpoint.
 
-### UseState hook
+### useState hook
 
 The useState() hook allows you to create, track and update a state in functional components. It takes in the initial value of the state variable as an argument. This value could be of any data type, such as string, number, object, array, etc.
 

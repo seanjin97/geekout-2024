@@ -8,7 +8,7 @@ The `useEffect` hook is an example of a **lifecycle** method which can get calle
 
 The `useEffect` hook is a function that lets you perform **side effects** in your React components. Side effects are operations or tasks that occur in your component that are not directly related to rendering the UI. We perform a side effect when we need to reach outside of our React component to do something. Examples of side effects: data fetching, setting timers, interacting with the DOM, logging to console, etc.
 
-### UseEffect syntax
+### useEffect syntax
 
 In the function `() => { ... }` that is the first argument to `useEffect`, we define the code that will run when the side-effect is triggered. In the array `[]`, we declare dependencies and which will decide when useEffect() should execute.
 

@@ -3,9 +3,9 @@ sidebar_position: 1
 ---
 
 # 1.1 Components
-In ReactJS, a web application is like a puzzle made up of many pieces, and each piece is called a "component." These components can be as simple as a button or as complex as an entire section of a webpage. Each component is a reusable piece of the user interface.
+In ReactJS, a web application is like a puzzle made up of many pieces, and each piece is called a "component". These components can be as simple as a button or as complex as an entire section of a webpage. Each component is a reusable piece of the user interface.
 
-To illustrate this, let's look at an example. Suppose we have a parent component that passes data to a child component. In React, this data is passed using "props", which stands for "properties." Props allow one component to send data to another, enabling components to communicate with each other.
+To illustrate this, let's look at an example. Suppose we have a parent component that passes data to a child component. In React, this data is passed using "props", which stands for "properties". Props allow one component to send data to another, enabling components to communicate with each other.
 
 Here's an example demonstrating how to pass props from a parent component to a child component:
 
