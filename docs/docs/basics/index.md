@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Basics
+# Backend Basics
 
 ## What You Will Be Creating
 
