@@ -10,6 +10,8 @@ Same thing as the frontend workshop, you'll need some pre-knowledge of javascrip
 **Introduction to Backend: (WATCH THESE!!)** 
 1. [What is the Client Server Model (3mins 44s)](https://www.youtube.com/watch?v=B8azMzrluHE)
 2. [What are HTTP Requests (4mins 55s)](https://www.youtube.com/watch?v=-Zea7GB2OwA)
+3. [What is JSON (2min 53s)](https://www.youtube.com/watch?v=40aKlrL-2V8)
+4. [RESTful APIs in 100 seconds (1min 40s)](https://www.youtube.com/watch?v=-MTSQjw5DrM)
 
 
 ## Frontend
