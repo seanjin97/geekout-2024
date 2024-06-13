@@ -1,10 +1,16 @@
 ---
-sidebar_position: 5
+sidebar_position: 1
 ---
 
 # Pre-reading
 
 ## Backend
+Same thing as the frontend workshop, you'll need some pre-knowledge of javascript!
+
+**Introduction to Backend: (WATCH THESE!!)** 
+1. [What is the Client Server Model (3mins 44s)](https://www.youtube.com/watch?v=B8azMzrluHE)
+2. [What are HTTP Requests (4mins 55s)](https://www.youtube.com/watch?v=-Zea7GB2OwA)
+
 
 ## Frontend
 
