@@ -4,11 +4,11 @@ sidebar_position: 3
 
 # 1.3 Hooks and state
 
-Hooks are functions that let you “hook into” React state and lifecycle features from function components Hooks help you in keeping track of data that changes, adding interactivity to your website, and managing the way your components work.
+Hooks are functions that let you “hook into” React state and lifecycle features from function components. Hooks help you in keeping track of data that changes, adding interactivity to your website, and managing the way your components work.
 
 Some hooks that are commonly used: 
-- State hook (useState)
-- Effect hook (useEffect)
+- State hook (useState). **State** is an object that holds information that may change over the lifetime of a component. It's a way to keep track of dynamic data in your application. When the state of a component changes, React re-renders the component to reflect the new state.
+- Effect hook (useEffect). We'll explore this in the next checkpoint.
 
 ### UseState hook
 
@@ -19,6 +19,32 @@ For instance, in the following, `count` is the state, `setCount` is the function
 ``` jsx
 const [count, setCount] = useState(0) 
 ```
+
+### Example of `useState` Hook
+
+The `useState` hook lets you add state to a functional component:
+
+```jsx
+import React, { useState } from 'react';
+
+const Counter = () => {
+  // Declare a state variable named "count", initialized to 0
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+};
+
+export default Counter;
+```
+
+In this example, `useState` is used to declare a state variable `count` and a function `setCount` to update it. The state is initialised to 0. Each time the button is clicked, `setCount` updates the state, causing the component to re-render and display the new count.
 
 ### Exercise 3A
 

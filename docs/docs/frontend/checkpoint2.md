@@ -8,7 +8,7 @@ Many projects on the web need to interface with a REST API at some stage in thei
 
 Axios, which is a popular library is mainly used to send asynchronous HTTP requests to REST endpoints, helps to streamline the communication with the backend. You can use Axios to interact with APIs, fetch data, and perform various HTTP operations.
 
-Here's a function which calls the update endpoint.
+Here's a function which calls the update (PUT) endpoint.
 
 ``` jsx
 const updateTodoItem = async (newDone) => {
@@ -23,6 +23,12 @@ const updateTodoItem = async (newDone) => {
     }
   };
 ```
+
+This function `updateTodoItem`:
+
+1. Uses `axios.put` to send a PUT request: This request updates an existing todo item. The URL for the request is constructed using the API endpoint and the ID of the todo item (`props.id`).
+2. Sends a payload with the updated data: This payload includes the `id`, `title` (from `props.description`), and the new `done` status (`newDone`).
+3. Handles errors with a try-catch block: If the request fails, it logs an error message to the console.
 
 ### Exercise 2A
 
