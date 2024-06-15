@@ -74,7 +74,7 @@ Nowadays, almost all companies uses AWS to deploy their servers/ websites. So le
 
 ![architecture diagram](images/hosting/architecture.png)
 
-At a high level, these are the steps that you'll have to take. Search around or read up on tutorials to help you! Feel free to discuss with in the [# backend-workshop](https://discord.com/channels/1224913680689266749/1224920594408144928) channel too!
+At a high level, these are the steps that you'll have to take. Search around or read up on tutorials to help you! Feel free to discuss in the [# backend-workshop](https://discord.com/channels/1224913680689266749/1224920594408144928) channel too!
 
 #### Steps
 
@@ -82,6 +82,7 @@ At a high level, these are the steps that you'll have to take. Search around or 
 2. Try running your docker container locally to test if it works. If it works, then it should work anywhere else. Take note of the ports you expose!
 3. Create an AWS account, you should get free tier so you don't burn your money up.
 4. Create an AWS ECR repository and push your docker image into an AWS ECR repository.
-5. Create an AWS Lambda function that runs the Docker image from the AWS ECR repository that you created.
-6. Create an API gateway and link it to the AWS Lambda function you created using an event trigger. (You should be using a proxy event)
-7. Call the provisioned AWS API Gateway URL to test your lambda function! If you've made it this far, you did it.
+5. Create an AWS ECS Cluster, ECS Service and ECS Task definition that runs the Docker image from the AWS ECR repository that you created.
+6. Call the public DNS addresss of your instance form your cluster to check if your application works!! If you've made it this far, you did it.
+
+<small>_hint hint: https://github.com/aws-samples/amazon-ecs-demo-with-node-express_</small>

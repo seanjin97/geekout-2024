@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Authentication
+# Security
 
 <small>_Now that I've hosted my backend server, got people keep attacking my api la how. put authentication lor._</small>
 
@@ -183,3 +183,24 @@ This is an example of what Solution Architecture is, being creative with how you
 #### Security layer using AWS
 
 ![architecture diagram](images/hosting/architecture.png)
+
+### Optional Challenge: JWT Bearer Token integration with Auth0
+
+Another lil challenge.
+
+Auth0 is quite a popular authentication and authorization Platform as a Service (PaaS).
+Why build your own authorization server when there's 1 million existing solutions out there.
+
+For this challenge, let's integrate our existing Express.js API server with Auth0 for funsies.
+
+At a high level, these are the steps that you'll have to take.
+
+#### Steps:
+
+1. Create an Auth0 account.
+2. Create an Auth0 API and configure it.
+3. Write an Express.js middleware that verifies the Access Token passed in the `Authorization` request header.
+4. Protect your private API endpoints with this middleware.
+5. Test your APIs to see if the JWT Bearer token works. If it does, you're done. ez.
+
+<small>_hint hint: https://auth0.com/docs/quickstart/backend/nodejs/01-authorization_</small>
