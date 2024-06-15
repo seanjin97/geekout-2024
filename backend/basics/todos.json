@@ -1,1 +1,5 @@
-[{"id":1,"description":"buy groceries 😃🍎","completed":false},{"id":2,"description":"drink water 🥤","completed":false},{"id":3,"description":"help papa water plants 😛🥦","completed":true},{"id":456147663,"description":"new todo","completed":false}]
+[
+  { "id": 1, "description": "buy groceries 😃🍎", "completed": false },
+  { "id": 2, "description": "drink water 🥤", "completed": false },
+  { "id": 3, "description": "help papa water plants 😛🥦", "completed": true }
+]
