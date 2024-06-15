@@ -194,4 +194,4 @@ Debug any errors on your own, chatgpt it or sum.
 
 ## Final Code
 
-After refactoring, you should end up with something like [this](https://github.com/seanjin97/geekout-2024/tree/master/backend/refactoring).
+After refactoring, you should end up with something like [this](https://github.com/seanjin97/geekout-2024/tree/master/backend/advanced/refactoring).

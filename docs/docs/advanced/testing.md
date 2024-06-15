@@ -178,4 +178,4 @@ i won't go through integration testing, i'll leave that for u to explore on ur o
 
 ## Final Code
 
-After adding tests, you should end up with something like [this](https://github.com/seanjin97/geekout-2024/tree/master/backend/testing).
+After adding tests, you should end up with something like [this](https://github.com/seanjin97/geekout-2024/tree/master/backend/advanced/testing).

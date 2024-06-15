@@ -41,7 +41,7 @@ For this exercise I'll just pick [Render](https://render.com/) randomly and it l
 
 ![create new web service](images/hosting/web-service.png)
 
-3. Create a new GitHub repository (google it if you dk how) and push your Express.js server code there. It should look something like [this](https://github.com/seanjin97/geekout-2024/tree/master/backend/hosting).
+3. Create a new GitHub repository (google it if you dk how) and push your Express.js server code there. It should look something like [this](https://github.com/seanjin97/geekout-2024/tree/master/backend/advanced/hosting).
 
 4. Connect that GitHub code repository to Render.
 
