@@ -3,7 +3,7 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "Geekout 2024 Web App Dev Workshop",
+  title: "Geekout 2024 Web Dev Workshop",
   tagline: "🔥",
   favicon: "img/GeekOut_2022.png",
 
