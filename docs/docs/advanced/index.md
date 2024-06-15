@@ -14,4 +14,6 @@ But just do it for funsies and for practice.
 
 There'll be less handholding here, so just chatgpt or google search whatever you don't understand or ask the facilitators in person.
 
+Feel free to ask questions in the [# backend-workshop](https://discord.com/channels/1224913680689266749/1224920594408144928) channel anytime. (even at 2am).
+
 <small>_aight let's get to it._</small>
