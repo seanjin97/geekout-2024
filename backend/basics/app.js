@@ -17,7 +17,7 @@ app.get("/todos", (req, res) => {
 
   const formattedData = JSON.parse(data);
 
-  res.status(200).json(formattedData);
+  return res.status(200).json(formattedData);
 });
 
 app.get("/todos/:id", (req, res) => {
@@ -32,10 +32,10 @@ app.get("/todos/:id", (req, res) => {
 
   // What if I can't find the todo item? I need to handle it with grace
   if (!theTodoIwant) {
-    res.status(400).json({ error: "cannot find the todo bro" });
+    return res.status(400).json({ error: "cannot find the todo bro" });
   }
 
-  res.status(200).json(theTodoIwant);
+  return res.status(200).json(theTodoIwant);
 });
 
 // Automatically read request body as JSON
@@ -49,7 +49,7 @@ app.post("/todos", (req, res) => {
 
   // What if there's no description field given?
   if (!newTodoItemDescription) {
-    res.status(400).json({ error: "no description bro" });
+    return res.status(400).json({ error: "no description bro" });
   }
   // Read our existing todos
   const existingTodos = fs.readFileSync("todos.json", "utf-8");
@@ -67,7 +67,7 @@ app.post("/todos", (req, res) => {
 
   fs.writeFileSync("todos.json", JSON.stringify(updatedListOfTodos));
 
-  res.status(201).json(newTodoItem);
+  return res.status(201).json(newTodoItem);
 });
 
 app.put("/todos/:id", (req, res) => {
@@ -76,7 +76,7 @@ app.put("/todos/:id", (req, res) => {
 
   // What if there's no request body
   if (!requestBody) {
-    res.status(400).json({ error: "no request body" });
+    return res.status(400).json({ error: "no request body" });
   }
   const description = requestBody.description;
   const completed = requestBody.completed;
@@ -97,12 +97,12 @@ app.put("/todos/:id", (req, res) => {
   }
 
   if (!updatedTodo) {
-    res.status(400).json("todo not found");
+    return res.status(400).json("todo not found");
   }
   // Save the updated list of todos
   fs.writeFileSync("todos.json", JSON.stringify(formattedTodos));
 
-  res.status(200).json(updatedTodo);
+  return res.status(200).json(updatedTodo);
 });
 
 app.delete("/todos/:id", (req, res) => {
@@ -118,7 +118,7 @@ app.delete("/todos/:id", (req, res) => {
   );
 
   if (!theTodoIwant) {
-    res.status(400).json({ error: "no such todo" });
+    return res.status(400).json({ error: "no such todo" });
   }
 
   const updatedListOfTodos = formattedExistingTodos.filter(
@@ -127,7 +127,7 @@ app.delete("/todos/:id", (req, res) => {
 
   // Save the updated list of todos
   fs.writeFileSync("todos.json", JSON.stringify(updatedListOfTodos));
-  res.status(204).json();
+  return res.status(204).json();
 });
 
 app.listen(8000, () => {
