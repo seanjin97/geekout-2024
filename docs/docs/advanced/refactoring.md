@@ -4,6 +4,12 @@ sidebar_position: 1
 
 # Refactoring
 
+## Code checkpoint
+
+Before getting started with this exercise, ensure that your code looks like [this](https://github.com/seanjin97/geekout-2024/tree/master/backend/basics).
+
+## What is refactoring?
+
 Refactoring code is the process of restructuring existing computer code without changing its external behavior. The main goal of code refactoring is to improve the code's internal structure, making it more readable, maintainable, and efficient while preserving its functionality.
 
 ## Why refactor

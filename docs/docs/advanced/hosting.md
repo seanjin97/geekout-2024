@@ -4,6 +4,10 @@ sidebar_position: 3
 
 # Hosting
 
+## Code checkpoint
+
+Before getting started with this exercise, ensure that your code looks like [this](https://github.com/seanjin97/geekout-2024/tree/master/backend/advanced/refactoring).
+
 ## Why host??
 
 <small>_U got ur api alr then now what, ownself call on localhost where got fun. Need to let people use ma, so we host it. Hosting options for backend servers. There's like 1 million of them._</small>

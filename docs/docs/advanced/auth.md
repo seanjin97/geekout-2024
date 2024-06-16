@@ -4,6 +4,10 @@ sidebar_position: 4
 
 # Security
 
+## Code checkpoint
+
+Before getting started with this exercise, ensure that your code looks like [this](https://github.com/seanjin97/geekout-2024/tree/master/backend/advanced/refactoring).
+
 ## Why do we need to secure our API endpoints?
 
 <small>_Now that I've hosted my backend server, got people keep attacking my api la how. put authentication lor._</small>

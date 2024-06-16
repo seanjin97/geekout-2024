@@ -9,6 +9,10 @@ sidebar_position: 5
 > 1. Docker. I'll not hand hold how to use Docker, so go set it up and figure it out yourselves.
 > 2. Some knowledge of SQL to be able to appreciate what an ORM does.
 
+## Code checkpoint
+
+Before getting started with this exercise, ensure that your code looks like [this](https://github.com/seanjin97/geekout-2024/tree/master/backend/advanced/refactoring).
+
 ## Why use a Database?
 
 Eh abit useless la api but restart server cannot rmb anything alr. Let's now make our Todo app's data persistent.

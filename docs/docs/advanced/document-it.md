@@ -4,7 +4,13 @@ sidebar_position: 9
 
 # API Documentation
 
-As a developer, it's important to document your APIs so that
+## Code checkpoint
+
+Before getting started with this exercise, ensure that your code looks like [this](https://github.com/seanjin97/geekout-2024/tree/master/backend/advanced/refactoring).
+
+## Why have API docs??
+
+As a developer, it's important to document your APIs so that:
 
 1. **Clarity and Understanding**: API documentation provides a clear explanation of what your API does, how it works, and how to use it effectively. It serves as a guide for both your team members and external developers who may integrate with your API.
 

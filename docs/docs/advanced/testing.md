@@ -4,7 +4,9 @@ sidebar_position: 2
 
 # Testing
 
-This section is more relevant if you've done the [Refactoring](./refactoring.md) exercise.
+## Code checkpoint
+
+Before getting started with this exercise, ensure that your code looks like [this](https://github.com/seanjin97/geekout-2024/tree/master/backend/advanced/refactoring).
 
 ## Why Test?
 
