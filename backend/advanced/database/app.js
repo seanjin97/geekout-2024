@@ -1,7 +1,11 @@
-const { randomInt } = require("crypto");
 const express = require("express");
 const cors = require("cors");
-const { readExistingTodos, getSpecificTodo, saveTodos } = require("./utils");
+const {
+  readExistingTodos,
+  getSpecificTodo,
+  saveTodo,
+  deleteTodo,
+} = require("./utils");
 const { dataSource } = require("./database");
 
 const app = express();
@@ -13,26 +17,25 @@ app.get("/hello", (req, res) => {
   res.send("Hello, World!");
 });
 
-app.get("/todos", (req, res) => {
-  const existingTodos = readExistingTodos();
+app.get("/todos", async (req, res) => {
+  const existingTodos = await readExistingTodos();
 
-  res.status(200).json(existingTodos);
+  return res.status(200).json(existingTodos);
 });
 
-app.get("/todos/:id", (req, res) => {
+app.get("/todos/:id", async (req, res) => {
   const todoId = Number(req.params.id);
 
-  const theTodoIwant = getSpecificTodo(todoId);
+  const theTodoIwant = await getSpecificTodo(todoId);
 
   // What if I can't find the todo item? I need to handle it with grace
   if (!theTodoIwant) {
-    res.status(400).json({ error: "cannot find the todo bro" });
+    return res.status(400).json({ error: "cannot find the todo bro" });
   }
-
-  res.status(200).json(theTodoIwant);
+  return res.status(200).json(theTodoIwant);
 });
 
-app.post("/todos", (req, res) => {
+app.post("/todos", async (req, res) => {
   // Logic to create a new todo item
   const requestBody = req.body;
 
@@ -40,27 +43,19 @@ app.post("/todos", (req, res) => {
 
   // What if there's no description field given?
   if (!newTodoItemDescription) {
-    res.status(400).json({ error: "no description bro" });
+    return res.status(400).json({ error: "no description bro" });
   }
 
-  const existingTodos = readExistingTodos();
-
-  // Create a new todo
   const newTodoItem = {
-    id: randomInt(0, 999999999),
     description: newTodoItemDescription,
-    completed: false,
   };
 
-  // Merge the new todo into the existing todos
-  const updatedListOfTodos = [...existingTodos, newTodoItem];
+  const createdTodoItem = await saveTodo(newTodoItem);
 
-  saveTodos(updatedListOfTodos);
-
-  res.status(201).json(newTodoItem);
+  return res.status(201).json(createdTodoItem);
 });
 
-app.put("/todos/:id", (req, res) => {
+app.put("/todos/:id", async (req, res) => {
   const todoId = Number(req.params.id);
   const requestBody = req.body;
 
@@ -71,43 +66,29 @@ app.put("/todos/:id", (req, res) => {
   const description = requestBody.description;
   const completed = requestBody.completed;
 
-  const existingTodos = readExistingTodos();
+  const checkIfTodoExists = await getSpecificTodo(todoId);
 
-  let updatedTodo;
-  // Loop through all todos and update the one we're interested in
-  for (let index = 0; index < existingTodos.length; index++) {
-    const todoTask = existingTodos[index];
-    if (todoTask.id === todoId) {
-      todoTask.description = description;
-      todoTask.completed = completed;
-      updatedTodo = todoTask;
-    }
+  const todoToUpdate = {
+    id: todoId,
+    description,
+    completed,
+  };
+
+  if (!checkIfTodoExists) {
+    return res.status(400).json("todo not found");
   }
 
-  if (!updatedTodo) {
-    res.status(400).json("todo not found");
-  }
-  // Save the updated list of todos
-  saveTodos(existingTodos);
+  const updatedTodoItem = await saveTodo(todoToUpdate);
 
-  res.status(200).json(updatedTodo);
+  return res.status(200).json(updatedTodoItem);
 });
 
-app.delete("/todos/:id", (req, res) => {
+app.delete("/todos/:id", async (req, res) => {
   const todoId = Number(req.params.id);
 
-  const existingTodos = readExistingTodos();
+  await deleteTodo(todoId);
 
-  const theTodoIwant = getSpecificTodo(todoId);
-
-  if (!theTodoIwant) {
-    res.status(400).json({ error: "no such todo" });
-  }
-
-  const updatedListOfTodos = existingTodos.filter((todo) => todo.id !== todoId);
-
-  saveTodos(updatedListOfTodos);
-  res.status(204).json();
+  return res.status(204).json();
 });
 
 dataSource.initialize().then(() => {

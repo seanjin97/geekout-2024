@@ -1,21 +1,23 @@
-const fs = require("fs");
+const { dataSource } = require("./database");
 
-function readExistingTodos() {
-  const existingTodos = fs.readFileSync("./todos.json", "utf-8");
+const todoRepository = dataSource.getRepository("todo");
 
-  const formattedTodos = JSON.parse(existingTodos);
-
-  return formattedTodos;
+async function readExistingTodos() {
+  const existingTodos = await todoRepository.find();
+  return existingTodos;
 }
 
-function getSpecificTodo(id) {
-  const existingTodos = readExistingTodos();
-  const theTodoIwant = existingTodos.find((todo) => todo.id === id);
-
-  return theTodoIwant;
+async function getSpecificTodo(id) {
+  const theTodoIWant = await todoRepository.findOneBy({ id }); // shortcut for {id: id}
+  return theTodoIWant;
 }
 
-function saveTodos(todos) {
-  fs.writeFileSync("todos.json", JSON.stringify(todos));
+async function saveTodo(todo) {
+  return await todoRepository.save(todo);
 }
-module.exports = { readExistingTodos, getSpecificTodo, saveTodos };
+
+async function deleteTodo(todoId) {
+  return await todoRepository.delete(todoId);
+}
+
+module.exports = { readExistingTodos, getSpecificTodo, saveTodo, deleteTodo };
