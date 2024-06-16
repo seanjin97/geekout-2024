@@ -4,6 +4,13 @@ sidebar_position: 5
 
 # Database
 
+## Prerequisites
+
+> 1. Docker. I'll not hand hold how to use Docker, so go set it up and figure it out yourselves.
+> 2. Some knowledge of SQL to be able to appreciate what an ORM does.
+
+## Why use a Database?
+
 Eh abit useless la api but restart server cannot rmb anything alr. Let's now make our Todo app's data persistent.
 
 When building a REST API server, choosing the right database is crucial to efficiently store and retrieve data. There are two main types of databases: relational and non-relational (NoSQL).

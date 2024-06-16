@@ -174,8 +174,17 @@ We use `jest.mock("fs")` to mock the `fs` module, allowing us to control its beh
 
 nice, now we have unit tests. refactoring our code will be much easier in the future. Why? if we mistakenly change something, the test would break, making sure we either update the tests if the change in behaviour is intended, or fix the code if the behaviour change was not intended.
 
-i won't go through integration testing, i'll leave that for u to explore on ur own.
-
 ## Final Code
 
 After adding tests, you should end up with something like [this](https://github.com/seanjin97/geekout-2024/tree/master/backend/advanced/testing).
+
+## Optional Challenge: Integration Testing
+
+lil challenge for ya.
+
+We have unit tests now, but we don't have integration tests.
+
+### Steps at a high level:
+
+1. Determine which integration testing library to use
+2. Write the test cases to call all your APIs and verify if you get the expected responses. We don't need to do integration testing for all edge cases, just the [happy flow](https://userpilot.com/blog/happy-path/) would do.

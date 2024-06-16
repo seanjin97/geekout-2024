@@ -4,6 +4,8 @@ sidebar_position: 4
 
 # Security
 
+## Why do we need to secure our API endpoints?
+
 <small>_Now that I've hosted my backend server, got people keep attacking my api la how. put authentication lor._</small>
 
 When building a REST API server, it's important to secure your endpoints to ensure that only authorized users can access and manipulate the data. There are several types of authentication that can be implemented in a REST API. Let's explore a few common ones. Ordered from easiest (less secure) to hardest (most secure).
@@ -188,14 +190,12 @@ This is an example of what Solution Architecture is, being creative with how you
 
 Another lil challenge.
 
-Auth0 is quite a popular authentication and authorization Platform as a Service (PaaS).
+[Auth0](https://auth0.com/) is quite a popular authentication and authorization Platform as a Service (PaaS).
 Why build your own authorization server when there's 1 million existing solutions out there.
 
 For this challenge, let's integrate our existing Express.js API server with Auth0 for funsies.
 
-At a high level, these are the steps that you'll have to take.
-
-#### Steps:
+#### Steps at a high level:
 
 1. Create an Auth0 account.
 2. Create an Auth0 API and configure it.
