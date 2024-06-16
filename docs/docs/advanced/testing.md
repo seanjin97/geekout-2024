@@ -70,17 +70,17 @@ test("readExistingTodos should return a list of todo tasks", () => {
   expect(readExistingTodos()).toEqual([
     {
       id: 1,
-      title: "buy groceries 😃🍎",
+      description: "buy groceries 😃🍎",
       completed: false,
     },
     {
       id: 2,
-      title: "drink water 🥤",
+      description: "drink water 🥤",
       completed: false,
     },
     {
       id: 3,
-      title: "help papa water plants 😛🥦",
+      description: "help papa water plants 😛🥦",
       completed: true,
     },
   ]);

@@ -447,6 +447,8 @@ Make sure to mock the database functions. This way we can test our application l
 
 In this section we learnt how to run a database locally using `Docker`, then updated our application to use the database to retrieve or manipulate data instead of writing to a JSON file.
 
+## Final Code
+
 Full code here: https://github.com/seanjin97/geekout-2024/tree/master/backend/advanced/database
 
 ## Optional Challenge: Integrate with a cloud database
