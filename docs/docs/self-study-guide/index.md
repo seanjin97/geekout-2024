@@ -14,7 +14,7 @@ Quote from a principal Software Engineer from GovTech:
 > Looking at the list.. think I still have a long way to go too.
 >
 > What I’m trying to say is .. that it doesn’t end. Somebody will always point out more important things that we don’t know yet, and that they know. So don’t feel “behind”; feel energised instead, that there’s so much to learn (How boring would it be to know all that there’s to know)
-
+>
 > If your time is precious, learn things that have longevity though. Approaches and algorithms are usually as evergreen as their constraints. Tools and esp frameworks, not so much.
 
 ## A lil guide to help you prioritise things you need to do.
