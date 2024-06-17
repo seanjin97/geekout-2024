@@ -5,7 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Geekout 2024 Web Dev Workshop",
   tagline: "🔥",
-  favicon: "img/GeekOut_2022.png",
+  favicon: "img/GeekOut.ico",
 
   // Set the production url of your site here
   url: "https://seanjin97.github.io",
@@ -54,7 +54,7 @@ const config: Config = {
       title: "Geekout 2024",
       logo: {
         alt: "My Site Logo",
-        src: "img/GeekOut_2022.png",
+        src: "img/android-chrome-512x512.png",
       },
       items: [
         {
