@@ -22,10 +22,6 @@ As a developer, it's important to document your APIs so that:
 
 5. **Better API Discoverability**: Documenting your APIs makes them more discoverable. Developers can easily find and explore the available endpoints, understand the functionality offered, and determine if your API meets their requirements. This increases the visibility of your API and attracts potential users.
 
-## Documenting Your Express APIs
-
-honestly, just chatgpt it. aint nobody got time for allat.
-
 ## Understanding OpenAPI Specification and Swagger
 
 ### What is OpenAPI Specification?
@@ -130,7 +126,7 @@ First create a `swagger.yaml` file that will contain the Open API spec formatted
 
 ### Write your API docs in `swagger.yaml`
 
-<small>god bless chatgpt this is what it's good for, else we'd have to manually write it all out.</small>
+<small>bless chatgpt this is what it's good for, else we'd have to manually write it all out.</small>
 
 Prompt: `write me a yaml file that contains the api documenation of this express.js todo list api in open api specification.` and add `app.js` to the chatgpt context.
 
