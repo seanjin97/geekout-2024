@@ -21,22 +21,21 @@ The endpoint we should create is `POST /todos` where we take in a request body w
 app.use(express.json());
 
 app.post("/todos", (req, res) => {
-  // Logic to create a new todo item
   const requestBody = req.body;
-
-  const todosJson = fs.readFileSync("./todos.json");
-  const existingTodos = JSON.parse(todosJson);
 
   // What if there's no request body?
   if (!requestBody) {
     res.status(400).json({ error: "no request body provided" });
   }
 
-  const updatedListOfTodos = [...existingTodos, newTodo];
+  const todosJson = fs.readFileSync("./todos.json");
+  const existingTodos = JSON.parse(todosJson);
+
+  const updatedListOfTodos = [...existingTodos, requestBody];
 
   fs.writeFileSync("./todos.json", JSON.stringify(updatedListOfTodos));
 
-  res.status(201).json(newTodoItem);
+  res.status(201).json(requestBody);
 });
 ```
 

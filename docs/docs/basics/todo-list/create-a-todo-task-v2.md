@@ -47,6 +47,6 @@ app.post("/todos", (req, res) => {
 
   fs.writeFileSync("./todos.json", JSON.stringify(updatedListOfTodos));
 
-  res.status(201).json(requestBody);
+  res.status(201).json(newTodo);
 });
 ```
