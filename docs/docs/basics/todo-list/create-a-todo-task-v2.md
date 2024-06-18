@@ -26,21 +26,27 @@ Let's revise the user story.
 app.use(express.json());
 
 app.post("/todos", (req, res) => {
-  // Logic to create a new todo item
   const requestBody = req.body;
 
-  const newTodoItemDescription = requestBody.description;
+  const todoDescription = requestBody.description;
 
-  // What if there's no description field given?
-  if (!newTodoItemDescription) {
-    res.status(400).json({ error: "no todo description bro" });
+  if (!todoDescription) {
+    return res.status(400).json({ error: "you did not provide a description" });
   }
 
-  const newTodoItem = {
-    id: randomInt(0, 999999999),
-    description: newTodoItemDescription,
+  const todosJson = fs.readFileSync("./todos.json");
+  const existingTodos = JSON.parse(todosJson);
+
+  const newTodo = {
+    id: randomInt(9999999999),
+    description: todoDescription,
     completed: false,
   };
-  res.status(201).json(newTodoItem);
+
+  const updatedListOfTodos = [...existingTodos, newTodo];
+
+  fs.writeFileSync("./todos.json", JSON.stringify(updatedListOfTodos));
+
+  res.status(201).json(requestBody);
 });
 ```
