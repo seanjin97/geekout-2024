@@ -5,11 +5,16 @@ sidebar_position: 1
 # 1.1 Components
 In ReactJS, a web application is like a puzzle made up of many pieces, and each piece is called a "component". These components can be as simple as a button or as complex as an entire section of a webpage. Each component is a reusable piece of the user interface.
 
+- **Building Blocks**: Think of ReactJS components like Lego pieces. Each piece represents a part of a webpage—like a button, a form, or a section with photos and text. Just as you build different things with Lego by putting pieces together, you can build webpages by combining these components.
+- **Independence**: Each component is like a mini-factory that works on its own. It has everything it needs to function, and it doesn't mess with other components. This makes it easier to fix problems since you only need to look at one piece at a time.
+- **Nesting**: Components can be put inside each other, like putting a smaller lego item into a bigger lego house. This helps organize the pieces better and build more complex sections of the webpage without getting overwhelmed.
+
 To illustrate this, let's look at an example. Suppose we have a parent component that passes data to a child component. In React, this data is passed using "props", which stands for "properties". Props allow one component to send data to another, enabling components to communicate with each other.
+- **Props as Instructions/Information**: Props (short for properties) are like specific instructions or information that the parent gives to its child components to use.
 
 Here's an example demonstrating how to pass props from a parent component to a child component:
 
-Parent component
+**Parent component**
 ``` jsx
 const ParentComponent = () => {
   const greeting = "Hello";
@@ -24,7 +29,7 @@ const ParentComponent = () => {
 };
 ```
 
-Child component
+**Child component**
 ``` jsx
 const ChildComponent = (props: { greeting, name }) => {
   return (
