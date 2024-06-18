@@ -64,11 +64,13 @@ Behind the scenes, they'll handle [containerisation](https://www.youtube.com/wat
 
 This gives you a good developer experience for getting your stuff live. But then you don't learn anything from it.
 
-## Optional Challenge: Deploying on Amazon Web Services (AWS)
+## Optional Challenge: Deploying on Google Cloud
 
 Here's a little challenge for you.
 
 Let's deploy our application on Google Cloud Run. It's a serverless service so you'd only need to pay for what you use. <small>_if no one use then don't need pay_</small>
+
+Why Google Cloud Run? Deploying on Google Cloud Run is easier compared to AWS with less technical overhead. It also allows you to deploy your applications fast, and it scales better and at a lower cost compared to the likes of Render/ Vercel etc.
 
 ### Steps at a high level
 
@@ -77,6 +79,6 @@ Let's deploy our application on Google Cloud Run. It's a serverless service so y
 3. Create a Google Cloud account. You should also create a project within your Google Cloud account.
 4. Push your previously created docker image to Docker Hub or whichever docker repository of choice.
 5. Create a Google Cloud Run Service and select "Deploy one revision from an existing container image".
-6. Call the auto generated URL to check if your application works!! If you've made it this far, you did it.
+6. Call the auto generated URL (e.g. https://todo-list-api-dmqq4kn66q-as.a.run.app/hello) to check if your application works!! If you've made it this far, you did it.
 
 <small>_hint hint: https://codelabs.developers.google.com/cloud-run-starter-app. In this tutorial example, they use the Google Cloud CLI to deploy the application, but you can do it entirely through the Google Cloud web UI (except the Docker build steps)._</small>
