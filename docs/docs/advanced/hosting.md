@@ -66,19 +66,17 @@ This gives you a good developer experience for getting your stuff live. But then
 
 ## Optional Challenge: Deploying on Amazon Web Services (AWS)
 
-Here's a little challenge for you. I think this is the hardest challenge. Search around or read up on tutorials to help you! Feel free to discuss in the [# backend-workshop](https://discord.com/channels/1224913680689266749/1224920594408144928) channel too!
+Here's a little challenge for you.
 
-Nowadays, almost all companies uses AWS to deploy their servers/ websites. So let's deploy our application on AWS Lambda and make it accessible over the internet. Here's what you're gonna build.
-
-![architecture diagram](images/hosting/architecture.png)
+Let's deploy our application on Google Cloud Run. It's a serverless service so you'd only need to pay for what you use. <small>_if no one use then don't need pay_</small>
 
 ### Steps at a high level
 
 1. Using [Docker](https://www.docker.com/get-started/), containerise your application into a Docker image. Ownself go learn this if you dk. [This](https://www.youtube.com/watch?v=Gjnup-PuquQ) is a good place to start
 2. Try running your docker container locally to test if it works. If it works, then it should work anywhere else. Take note of the ports you expose!
-3. Create an AWS account, you should get free tier so you don't burn your money up.
-4. Create an AWS ECR repository and push your docker image into an AWS ECR repository.
-5. Create an AWS ECS Cluster, ECS Service and ECS Task definition that runs the Docker image from the AWS ECR repository that you created.
-6. Call the public DNS addresss of your instance form your cluster to check if your application works!! If you've made it this far, you did it.
+3. Create a Google Cloud account. You should also create a project within your Google Cloud account.
+4. Push your previously created docker image to Docker Hub or whichever docker repository of choice.
+5. Create a Google Cloud Run Service and select "Deploy one revision from an existing container image".
+6. Call the auto generated URL to check if your application works!! If you've made it this far, you did it.
 
-<small>_hint hint: https://github.com/aws-samples/amazon-ecs-demo-with-node-express_</small>
+<small>_hint hint: https://codelabs.developers.google.com/cloud-run-starter-app. In this tutorial example, they use the Google Cloud CLI to deploy the application, but you can do it entirely through the Google Cloud web UI (except the Docker build steps)._</small>

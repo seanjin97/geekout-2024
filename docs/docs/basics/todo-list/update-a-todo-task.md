@@ -57,3 +57,10 @@ app.put("/todos/:id", (req, res) => {
 - The `PUT /todos/:id` endpoint is used to update a specific todo item by its ID.
 - The todo ID is passed as a parameter in the URL, and the updated todo data is sent in the request body.
 - It responds with the updated todo item in the response body.
+
+## Mental model
+### Successful update
+![update successful](images/update-successful.png)
+
+### Todo Task to update does not exist
+![update unsuccessful](images/update-unsuccessful.png)
