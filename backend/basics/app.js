@@ -32,7 +32,7 @@ app.get("/todos/:id", (req, res) => {
 
   // What if I can't find the todo item? I need to handle it with grace
   if (!theTodoIwant) {
-    return res.status(400).json({ error: "cannot find the todo bro" });
+    return res.status(404).json({ error: "cannot find the todo bro" });
   }
 
   return res.status(200).json(theTodoIwant);
@@ -79,7 +79,11 @@ app.put("/todos/:id", (req, res) => {
     return res.status(400).json({ error: "no request body" });
   }
   const description = requestBody.description;
-  const completed = requestBody.completed;
+  const completed = "completed" in requestBody ? requestBody.completed : false;
+
+  if (!description) {
+    return res.status(400).json({ error: "no description provided" });
+  }
 
   // Read our existing todos
   const existingTodos = fs.readFileSync("todos.json", "utf-8");
@@ -97,7 +101,7 @@ app.put("/todos/:id", (req, res) => {
   }
 
   if (!updatedTodo) {
-    return res.status(400).json("todo not found");
+    return res.status(404).json("todo not found");
   }
   // Save the updated list of todos
   fs.writeFileSync("todos.json", JSON.stringify(formattedTodos));

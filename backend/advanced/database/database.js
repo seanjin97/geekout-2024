@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const typeorm = require("typeorm");
 
 const Todo = new typeorm.EntitySchema({
@@ -20,13 +22,13 @@ const Todo = new typeorm.EntitySchema({
 
 const dataSource = new typeorm.DataSource({
   type: "postgres",
-  host: "localhost",
-  port: 5432,
-  username: "postgres",
-  password: "password",
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  username: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
   database: "postgres",
   synchronize: true,
-  logging: true,
+  logging: false,
   entities: [Todo],
 });
 
